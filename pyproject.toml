@@ -1,0 +1,37 @@
+[project]
+name = "mdinfo-macos"
+dynamic = ["version", "readme"]
+authors = [{ name = "Rhet Turnbull", email = "rturnbull+git@gmail.com" }]
+description = "MacOS metadata plugin for mdinfo"
+requires-python = ">=3.9"
+keywords = ["macos", "mdinfo", "metadata", "cli", "plugin"]
+license = { text = "MIT License" }
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["mdinfo", "osxmetadata>=1.2.2", "datetime_tzutils"]
+
+[project.urls]
+homepage = "https://github.com/RhetTbull/mdinfo-macos"
+repository = "https://github.com/RhetTbull/mdinfo-macos"
+
+[tool.setuptools.dynamic]
+version = { attr = "mdinfo_macos.__version__" }
+readme = { file = ["README.rst"] }
+
+[build-system]
+# mdinfo must be included in requires for install of the plugin to work
+requires = [
+    "setuptools",
+    "setuptools-scm",
+    "wheel",
+    "mdinfo",
+    "osxmetadata>=1.2.2",
+    "datetime_tzutils",
+]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pytest", "bump2version", "cogapp", "freezegun", "doit", "build", "m2r2"]
+
+[project.entry-points.mdinfo]
+mac = "mdinfo_macos.mdinfo_mac"
+finder = "mdinfo_macos.mdinfo_finder"
