@@ -70,7 +70,9 @@ More information on the supported metadata fields can be found at Apple's develo
 
 ## Testing
 
-Tested on Ubuntu Linux and macOS Ventura using Python 3.9, 3.10, and 3.11.
+Tested macOS Ventura using Python 3.9, 3.10, and 3.11.
+
+This package requires macOS 10.15 or later. It will not work on other operating systems.
 
 ## Contributing
 

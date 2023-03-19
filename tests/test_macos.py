@@ -13,4 +13,7 @@ TEST_DATA = {
     "{exiftool:XMP:Title}": ["Pears on a tree"],
 }
 
+def test_macos():
+    """"Dummy test"""
+    assert True
 
