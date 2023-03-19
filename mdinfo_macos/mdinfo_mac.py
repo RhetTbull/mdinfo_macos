@@ -69,7 +69,7 @@ def get_template_help() -> Iterable:
 
     """
 
-    text += ", ".join(ALL_ATTRIBUTES)
+    text += ", ".join(sorted(ALL_ATTRIBUTES))
     text += "\n"
 
     fields = [["Field", "Description"], *[[k, v] for k, v in FIELDS.items()]]
