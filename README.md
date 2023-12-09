@@ -17,6 +17,13 @@ pip install mdinfo
 pip install mdinfo-macos
 ```
 
+Or if installed via pipx:
+
+```bash
+pipx install mdinfo
+pipx inject mdinfo mdinfo-macos
+```
+
 ## Template Help
 
 <!-- [[[cog
